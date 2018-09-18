@@ -15,4 +15,4 @@ RUN apt-get update && \
      && rm -f /var/lib/apt/lists/*.*
 
 
-ENTRYPOINT ["guestfish"]
+ENTRYPOINT ["virt-customize"]
