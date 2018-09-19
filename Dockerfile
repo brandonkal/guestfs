@@ -1,4 +1,4 @@
-FROM debian:stable-slim
+FROM debian:stable
 MAINTAINER Brandon Kalinowski
 
 ENV DEBIAN_FRONTEND=noninteractive \
