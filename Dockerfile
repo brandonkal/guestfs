@@ -8,7 +8,7 @@ RUN apt-get update && \
     apt-get install --no-install-recommends -y \
           libguestfs-tools \
           qemu-utils \
-          linux-image-generic \
+          linux-image-amd64 \
           supermin \
      && rm -f /var/lib/apt/lists/*.*
 
