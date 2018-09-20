@@ -9,6 +9,7 @@ RUN apt-get update && \
           libguestfs-tools \
           qemu-utils \
           supermin \
+          linux-image-amd64 \
      && rm -f /var/lib/apt/lists/*.*
 
 WORKDIR /root
