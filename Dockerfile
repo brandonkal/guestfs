@@ -15,4 +15,5 @@ RUN apt-get update && \
 
 WORKDIR /root
 COPY docker-entrypoint.sh /
+COPY 01-netcfg.yaml /
 ENTRYPOINT ["/docker-entrypoint.sh"]
