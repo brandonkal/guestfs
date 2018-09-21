@@ -6,11 +6,12 @@ ENV DEBIAN_FRONTEND=noninteractive \
 
 RUN apt-get update && \
     apt-get install --no-install-recommends -y \
-          libguestfs-tools \
-          qemu-utils \
-          supermin \
-          linux-image-amd64 \
-     && rm -f /var/lib/apt/lists/*.*
+        libguestfs-tools \
+        qemu-utils \
+        supermin && \
+    apt-get install --no-install-recommends -y \
+        linux-image-amd64 || echo "Failed to config image-amd64 but that is okay" \
+    && rm -f /var/lib/apt/lists/*.*
 
 WORKDIR /root
 COPY docker-entrypoint.sh /
