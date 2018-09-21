@@ -20,4 +20,4 @@ if [[ ! "$2" || "$2" = *[^0-9]* ]]; then
 fi
 
 qemu-img resize "/mnt/user/domains/$1/vdisk1.img" "$size"G
-virt-customize -a "/mnt/user/domains/$1/vdisk1.img" --uninstall cloud-init --ssh-inject root:file:/root/root.pubkey --hostname "$1"
+virt-customize -a "/mnt/user/domains/$1/vdisk1.img" --uninstall cloud-init --ssh-inject root:file:/root/root.pubkeys --hostname "$1"
